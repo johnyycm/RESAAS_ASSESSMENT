@@ -2,6 +2,7 @@ package com.example.chenminyao.resaas_assessment;
 
 import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -41,8 +42,9 @@ public class ListingDownloadClient {
 
     public void getListings(double lon, double lat){
         final String API_KEY = "465c3516cb028c80c44712539773c6fe";
+        final String MY_API_KEY = "70b2621ab3d6c1a3003a8a20f190104a";
         String pizzaCuisineId = "82";
-        double radius = 100;
+        double radius = 1000;
 //        String url = "https://developers.zomato.com/api/v2.1/search?lat=49.280392&lon=-123.120177&radius=100&cuisines=82";
         String url = "https://developers.zomato.com/api/v2.1/search?";
         StringBuilder stringBuilder = new StringBuilder(url);
@@ -74,6 +76,8 @@ public class ListingDownloadClient {
 //                            }
                             if (resultsFound>0)
                                 mListingListener.downloadFinished(response.toString());
+                            else
+                                Toast.makeText(mContext,"no results found",Toast.LENGTH_SHORT).show();
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -90,7 +94,7 @@ public class ListingDownloadClient {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("user-key", API_KEY);
+                params.put("user-key", MY_API_KEY);
                 params.put("Accept", "application/json");
 
                 return params;

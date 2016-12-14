@@ -39,16 +39,16 @@ public class MyLocationService extends GcmTaskService implements ListingListener
 
     private static final int RC_PLAY_SERVICES = 123;
 
-    @Override
-    public void onInitializeTasks() {
-        // When your package is removed or updated, all of its network tasks are cleared by
-        // the GcmNetworkManager. You can override this method to reschedule them in the case of
-        // an updated package. This is not called when your application is first installed.
-        //
-        // This is called on your application's main thread.
-        startPeriodicLocationTask(TASK_GET_LOCATION_PERIODIC,
-                30L, null);
-    }
+//    @Override
+//    public void onInitializeTasks() {
+//        // When your package is removed or updated, all of its network tasks are cleared by
+//        // the GcmNetworkManager. You can override this method to reschedule them in the case of
+//        // an updated package. This is not called when your application is first installed.
+//        //
+//        // This is called on your application's main thread.
+//        startPeriodicLocationTask(TASK_GET_LOCATION_PERIODIC,
+//                30L, null);
+//    }
 
     @Override
     public int onRunTask(TaskParams taskParams) {
@@ -59,16 +59,17 @@ public class MyLocationService extends GcmTaskService implements ListingListener
         // Default result is success.
         int result = GcmNetworkManager.RESULT_SUCCESS;
 
-        switch (tag) {
-            case TASK_GET_LOCATION_ONCE:
-                getLastKnownLocation();
-                break;
-
-            case TASK_GET_LOCATION_PERIODIC:
-                getLastKnownLocation();
-                break;
-
-        }
+//        switch (tag) {
+//            case TASK_GET_LOCATION_ONCE:
+//                getLastKnownLocation();
+//                break;
+//
+//            case TASK_GET_LOCATION_PERIODIC:
+//                getLastKnownLocation();
+//                break;
+//
+//        }
+        getLastKnownLocation();
 
         return result;
     }

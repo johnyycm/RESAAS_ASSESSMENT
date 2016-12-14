@@ -6,9 +6,12 @@
     <item
         android:id="@+id/refresh"
         android:title="refresh"
-        android:orderInCategory="60"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_refresh"
         app:showAsAction="ifRoom"/>
-
+    <item
+        android:id="@+id/enter"
+        android:title="enter"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="ifRoom"/>
 
 </menu>

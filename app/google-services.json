@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "901767400769",
+    "project_id": "firebase-resaas"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901767400769:android:6c1dfc33fa8dc2d4",
+        "android_client_info": {
+          "package_name": "com.example.chenminyao.resaas_assessment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOtVoXNZs4KPQugy942cciBE-46K_9QTs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
